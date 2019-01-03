@@ -16,6 +16,21 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@gamehall/core": [
+        "libs/core/src/index.ts"
+      ],
+      "@gamehall/api": [
+        "libs/api/src/index.ts"
+      ],
+      "@gamehall/ui": [
+        "libs/ui/src/index.ts"
+      ],
+      "@gamehall/pages": [
+        "libs/pages/src/index.ts"
+      ],
+      "@gamehall/common": [
+        "libs/common/src/index.ts"
+      ]
     }
   },
   "exclude": [

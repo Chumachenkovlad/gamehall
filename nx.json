@@ -13,6 +13,15 @@
     },
     "gamehall-e2e": {
       "tags": []
+    },
+    "core": {
+      "tags": []
+    },
+    "api": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
     }
   }
 }
