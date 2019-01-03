@@ -26,7 +26,10 @@
               "apps/gamehall/src/favicon.ico",
               "apps/gamehall/src/assets"
             ],
-            "styles": ["apps/gamehall/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/gamehall/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -80,7 +83,9 @@
               "apps/gamehall/tsconfig.app.json",
               "apps/gamehall/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -115,7 +120,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
