@@ -7,7 +7,7 @@
       "root": "apps/gamehall/",
       "sourceRoot": "apps/gamehall/src",
       "projectType": "application",
-      "prefix": "g",
+      "prefix": "gh",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
@@ -145,7 +145,7 @@
       "root": "libs/core",
       "sourceRoot": "libs/core/src",
       "projectType": "library",
-      "prefix": "gamehall",
+      "prefix": "gh",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -171,7 +171,7 @@
       "root": "libs/api",
       "sourceRoot": "libs/api/src",
       "projectType": "library",
-      "prefix": "gamehall",
+      "prefix": "gh",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -197,7 +197,7 @@
       "root": "libs/ui",
       "sourceRoot": "libs/ui/src",
       "projectType": "library",
-      "prefix": "gamehall",
+      "prefix": "gh",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
