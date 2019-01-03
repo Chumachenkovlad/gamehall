@@ -22,6 +22,12 @@
     },
     "ui": {
       "tags": []
+    },
+    "common": {
+      "tags": []
+    },
+    "pages": {
+      "tags": []
     }
   }
 }

@@ -1,4 +1,4 @@
-import { Environment } from './environment.interface';
+import { Environment } from '@gh/core';
 
 export const environment: Environment = {
   production: true,
