@@ -95,6 +95,24 @@
             "tsConfig": "apps/gamehall/tsconfig.spec.json",
             "setupFile": "apps/gamehall/src/test-setup.ts"
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/gamehall-server",
+            "main": "apps/gamehall/src/main.server.ts",
+            "tsConfig": "apps/gamehall/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/gamehall/src/environments/environment.ts",
+                  "with": "apps/gamehall/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
         }
       }
     },
