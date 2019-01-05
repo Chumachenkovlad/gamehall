@@ -83,9 +83,7 @@
               "apps/gamehall/tsconfig.app.json",
               "apps/gamehall/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -138,9 +136,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -158,9 +154,7 @@
               "libs/core/tsconfig.lib.json",
               "libs/core/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -186,9 +180,7 @@
               "libs/api/tsconfig.lib.json",
               "libs/api/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -214,9 +206,7 @@
               "libs/ui/tsconfig.lib.json",
               "libs/ui/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -233,7 +223,7 @@
       "root": "libs/common",
       "sourceRoot": "libs/common/src",
       "projectType": "library",
-      "prefix": "gamehall",
+      "prefix": "gh",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -242,9 +232,7 @@
               "libs/common/tsconfig.lib.json",
               "libs/common/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -261,7 +249,7 @@
       "root": "libs/pages",
       "sourceRoot": "libs/pages/src",
       "projectType": "library",
-      "prefix": "gamehall",
+      "prefix": "gh",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -270,9 +258,7 @@
               "libs/pages/tsconfig.lib.json",
               "libs/pages/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {

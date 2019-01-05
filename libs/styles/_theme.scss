@@ -1,0 +1,22 @@
+@import '~@angular/material/theming';
+@import 'palettes/color-palette-1';
+@import 'palettes/color-palette-2';
+
+@include mat-core();
+
+$theme-primary1: mat-palette($primary1);
+$theme-accent1: mat-palette($accent1);
+$theme-warn1: mat-palette($warn1);
+
+$theme1: mat-light-theme($theme-primary1, $theme-accent1, $theme-warn1);
+
+$theme-primary2: mat-palette($primary2);
+$theme-accent2: mat-palette($accent2);
+$theme-warn2: mat-palette($warn2);
+
+$theme2: mat-light-theme($theme-primary2, $theme-accent2, $theme-warn2);
+
+@include angular-material-theme($theme2);
+.mat-theme-2 {
+  @include angular-material-theme($theme1);
+}

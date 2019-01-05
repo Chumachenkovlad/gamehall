@@ -39,6 +39,9 @@
       ],
       "@gamehall/pages": [
         "libs/pages/src/index.ts"
+      ],
+      "@gamehall/styles": [
+        "libs/styles/src/index.ts"
       ]
     }
   },

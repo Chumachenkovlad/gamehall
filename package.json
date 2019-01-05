@@ -28,6 +28,7 @@
   },
   "private": true,
   "dependencies": {
+    "@gh/styles": "file:libs/styles",
     "@angular/animations": "^7.0.0",
     "@angular/cdk": "~7.2.0",
     "@angular/common": "^7.0.0",
@@ -52,7 +53,7 @@
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.10.0",
+    "@angular-devkit/build-angular": "^0.11.4",
     "@angular/cli": "7.0.1",
     "@angular/compiler-cli": "^7.0.0",
     "@angular/language-service": "^7.0.0",
