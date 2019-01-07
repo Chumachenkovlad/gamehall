@@ -7,8 +7,8 @@ import { map } from 'rxjs/operators';
 import { BaseResponse } from '../base/base-response';
 
 @Injectable()
-export abstract class ApiService {
-  readonly apiUrl: string;
+export class ApiService {
+  private readonly apiUrl: string;
   constructor(
     private readonly http: HttpClient,
     private readonly environment: Environment
@@ -46,7 +46,7 @@ export abstract class ApiService {
 
   public delete<T>(path: string, body: any): Observable<T> {
     return this.http
-      .request<BaseResponse<T>>('DELETE', `${this.environment.apiUrl}${path}`, {
+      .request<BaseResponse<T>>('DELETE', `${this.apiUrl}${path}`, {
         body
       })
       .pipe(map(res => res.rows));
