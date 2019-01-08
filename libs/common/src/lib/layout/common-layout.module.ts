@@ -1,22 +1,12 @@
 import { LayoutModule } from '@angular/cdk/layout';
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 
+import { SharedModule } from '../shared/shared.module';
 import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    RouterModule
-  ],
+  imports: [LayoutModule, RouterModule, SharedModule],
   declarations: [LayoutComponent],
   exports: [LayoutComponent]
 })

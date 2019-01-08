@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
-import { PROVIDERS } from './providers';
+import { RESOLVERS, SERVICES } from './providers';
 
 @NgModule({
-  imports: [CommonModule],
-  providers: [...PROVIDERS]
+  imports: [HttpClientModule],
+  providers: [...SERVICES, ...RESOLVERS]
 })
 export class ApiModule {}

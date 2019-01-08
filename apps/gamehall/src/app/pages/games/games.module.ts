@@ -1,12 +1,12 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { GamesListModule } from '@gh/common';
 
 import { GamesComponent } from './containers/games/games.component';
 
 @NgModule({
   imports: [
-    CommonModule,
+    GamesListModule,
     RouterModule.forChild([
       {
         path: '',

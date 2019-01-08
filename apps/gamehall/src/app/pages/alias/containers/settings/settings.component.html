@@ -1,3 +1,47 @@
-<p>
-  settings works!
-</p>
+<form [formGroup]="form" (submit)="submit()" *ngIf="form">
+  <mat-form-field class="row">
+    <mat-select
+      tabindex="0"
+      placeholder="Catogory"
+      formControlName="categoryId"
+    >
+      <mat-option
+        *ngFor="let category of (categories$ | async)"
+        [value]="category.id"
+      >
+        {{ category.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <section class="row slider-wrapper">
+    <span class="label">Количество слов: {{ form.get('limit').value }}</span>
+    <mat-slider
+      tabindex="1"
+      class="slider"
+      [max]="100"
+      [min]="10"
+      [step]="10"
+      [thumbLabel]="true"
+      [tickInterval]="10"
+      formControlName="limit"
+    ></mat-slider>
+  </section>
+  <section class="row slider-wrapper">
+    <span class="label">Время игры: {{ form.get('timeout').value }} (сек)</span>
+    <mat-slider
+      tabindex="2"
+      class="slider"
+      [max]="300"
+      [min]="60"
+      [step]="30"
+      [thumbLabel]="true"
+      [tickInterval]="300"
+      formControlName="timeout"
+    >
+    </mat-slider>
+  </section>
+  <section class="row actions">
+    <button type="submit" mat-raised-button color="primary">Играть</button>
+  </section>
+</form>

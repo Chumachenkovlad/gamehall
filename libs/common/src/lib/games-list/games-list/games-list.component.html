@@ -1,0 +1,18 @@
+<mat-card class="game-card" *ngFor="let game of games">
+  <mat-card-header>
+    <mat-card-title>{{ game.name | titlecase }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content
+    ><p>{{ game.description }}</p></mat-card-content
+  >
+  <mat-card-actions>
+    <a
+      mat-raised-button
+      type="button"
+      color="accent"
+      [routerLink]="['/games', game.link]"
+      routerLinkActive="router-link-active"
+      >Играть</a
+    >
+  </mat-card-actions>
+</mat-card>

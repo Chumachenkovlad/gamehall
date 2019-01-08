@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { ApiModule } from '@gh/api';
 import { CoreLayoutModule } from '@gh/common';
 import { CoreModule } from '@gh/core';
 import { NxModule } from '@nrwl/nx';
@@ -33,7 +34,8 @@ import { AppComponent } from './app.component';
     ),
     BrowserAnimationsModule,
     CoreModule.forRoot(environment),
-    CoreLayoutModule
+    CoreLayoutModule,
+    ApiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

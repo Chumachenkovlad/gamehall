@@ -1,0 +1,35 @@
+$label-width: 160px;
+$margin: 16px;
+
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.row {
+  width: calc(100% - #{$margin} * 2);
+  max-width: 400px;
+  margin: $margin;
+}
+
+.row.slider-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+@media screen and (min-width: 769px) {
+  .row.slider-wrapper {
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: center;
+
+    .slider {
+      flex: 1 1 calc(100% - #{$label-width});
+    }
+
+    .label {
+      margin-right: $margin;
+      flex: 0 0 $label-width;
+    }
+  }
+}

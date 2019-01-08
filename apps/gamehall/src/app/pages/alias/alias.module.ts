@@ -1,25 +1,27 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CardsResolver, CategoriesResolver } from '@gh/api';
+import { SharedModule } from '@gh/common';
 
-import {
-  containers,
-  PlaygroundComponent,
-  ResultsComponent,
-  SettingsComponent
-} from './containers';
+import { containers, PlaygroundComponent, ResultsComponent, SettingsComponent } from './containers';
 
 @NgModule({
   imports: [
-    CommonModule,
+    SharedModule,
     RouterModule.forChild([
       {
         path: '',
-        component: SettingsComponent
+        component: SettingsComponent,
+        resolve: {
+          categories: CategoriesResolver
+        }
       },
       {
         path: 'play',
-        component: PlaygroundComponent
+        component: PlaygroundComponent,
+        resolve: {
+          cards: CardsResolver
+        }
       },
       {
         path: 'results',
