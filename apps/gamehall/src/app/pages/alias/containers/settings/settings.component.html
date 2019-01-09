@@ -1,10 +1,6 @@
 <form [formGroup]="form" (submit)="submit()" *ngIf="form">
   <mat-form-field class="row">
-    <mat-select
-      tabindex="0"
-      placeholder="Catogory"
-      formControlName="categoryId"
-    >
+    <mat-select tabindex="0" placeholder="Словарь" formControlName="categoryId">
       <mat-option
         *ngFor="let category of (categories$ | async)"
         [value]="category.id"
