@@ -2,8 +2,11 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Category } from '@gh/api';
+import { BaseFormComponent } from '@gh/core';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { pluck } from 'rxjs/operators';
+
+import { AliasSettingsService } from '../../services';
 
 const DEFAULT_LIMIT = 10;
 const DEFAULT_TIMEOUT = 60;
@@ -13,17 +16,18 @@ const DEFAULT_TIMEOUT = 60;
   styleUrls: ['./settings.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SettingsComponent implements OnInit {
+export class SettingsComponent extends BaseFormComponent implements OnInit {
   form: FormGroup;
   categories$: Observable<Category[]>;
+
   constructor(
     private readonly fb: FormBuilder,
-    private readonly router: Router,
-    private readonly route: ActivatedRoute
+    private readonly route: ActivatedRoute,
+    private readonly aliasSettingsService: AliasSettingsService,
+    private readonly router: Router
   ) {
-    this.categories$ = this.route.data.pipe(
-      map((data: { categories: Category[] }) => data.categories)
-    );
+    super();
+    this.categories$ = this.route.data.pipe(pluck('categories'));
   }
 
   ngOnInit() {
@@ -38,11 +42,8 @@ export class SettingsComponent implements OnInit {
     });
   }
 
-  submit() {
-    if (this.form.valid) {
-      this.router.navigate(['/games', 'alias', 'play'], {
-        queryParams: this.form.value
-      });
-    }
+  onSubmit() {
+    this.aliasSettingsService.setSettings(this.form.value);
+    this.router.navigateByUrl('/games/alias/play');
   }
 }

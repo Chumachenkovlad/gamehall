@@ -1,0 +1,22 @@
+.mat-card-actions {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.btn {
+  width: 120px;
+}
+
+.mat-card-content {
+  padding: 16px;
+  text-align: center;
+}
+
+.mat-card {
+}
+
+.host {
+  max-width: calc(100% - 32px);
+  margin: 16px auto;
+}

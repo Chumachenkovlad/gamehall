@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CardsResolver, CategoriesResolver } from '@gh/api';
+import { CategoriesResolver } from '@gh/api';
 import { SharedModule } from '@gh/common';
 
-import { containers, PlaygroundComponent, ResultsComponent, SettingsComponent } from './containers';
+import { COMPONENTS } from './components';
+import { CONTAINERS, PlaygroundComponent, SettingsComponent } from './containers';
+import { RESOLVERS } from './resolvers';
+import { AliasCardsResolver } from './resolvers/alias-cards.resolver';
+import { SERVICES } from './services';
 
 @NgModule({
   imports: [
@@ -20,15 +24,12 @@ import { containers, PlaygroundComponent, ResultsComponent, SettingsComponent } 
         path: 'play',
         component: PlaygroundComponent,
         resolve: {
-          cards: CardsResolver
+          cards: AliasCardsResolver
         }
-      },
-      {
-        path: 'results',
-        component: ResultsComponent
       }
     ])
   ],
-  declarations: [...containers]
+  declarations: [...CONTAINERS, ...COMPONENTS],
+  providers: [...SERVICES, ...RESOLVERS]
 })
 export class AliasModule {}

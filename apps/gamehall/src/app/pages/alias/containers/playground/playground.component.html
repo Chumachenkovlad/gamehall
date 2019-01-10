@@ -1,3 +1,19 @@
-<p>
-  playground works!
-</p>
+<section class="game-wrapper" [ngSwitch]="status">
+  <button
+    mat-fab
+    color="accent"
+    (click)="initGame()"
+    *ngSwitchCase="statuses.READY"
+  >
+    Начать
+  </button>
+  <ng-container *ngSwitchCase="statuses.PLAYING">
+    <gh-alias-card
+      [card]="selectedCard"
+      (cardGuessed)="guessCard($event)"
+    ></gh-alias-card>
+  </ng-container>
+  <ng-container *ngSwitchCase="statuses.FINISHED">
+    <h1>Игра Закончена</h1>
+  </ng-container>
+</section>
