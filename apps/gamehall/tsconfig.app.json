@@ -6,7 +6,8 @@
   },
   "exclude": [
     "src/test-setup.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "**/*.stories.ts"
   ],
   "include": [
     "**/*.ts"

@@ -1,0 +1,9 @@
+{
+  "extends": "../apps/gamehall/tsconfig.app.json",
+  "exclude": [
+    "../apps/gamehall/src/test-setup.ts",
+    "../apps/gamehall/src/**/*.spec.ts",
+    "../node_modules/**/*"
+  ],
+  "include": ["../apps/gamehall/src/**/*"]
+}

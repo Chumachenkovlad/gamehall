@@ -1,6 +1,6 @@
 <mat-card
-  (swiperight)="cardGuessed.next(true)"
-  (swipeleft)="cardGuessed.next(false)"
+  (swiperight)="cardGuessed.emit(true)"
+  (swipeleft)="cardGuessed.emit(false)"
 >
   <mat-card-content>
     <h1>{{ card.name | titlecase }}</h1>
@@ -10,7 +10,7 @@
       class="btn"
       mat-raised-button
       color="accent"
-      (click)="cardGuessed.next(true)"
+      (click)="cardGuessed.emit(true)"
     >
       Угадано
     </button>
@@ -18,7 +18,7 @@
       class="btn"
       mat-raised-button
       color="warn"
-      (click)="cardGuessed.next(false)"
+      (click)="cardGuessed.emit(false)"
     >
       Пропустить
     </button>
