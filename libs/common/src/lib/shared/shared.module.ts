@@ -10,6 +10,7 @@ import {
   MatSelectModule,
   MatSidenavModule,
   MatSliderModule,
+  MatTableModule,
   MatToolbarModule,
 } from '@angular/material';
 
@@ -25,7 +26,8 @@ const SHARED_MODULES = [
   MatIconModule,
   MatListModule,
   MatSliderModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatTableModule
 ];
 
 @NgModule({

@@ -14,6 +14,9 @@
     ></gh-alias-card>
   </ng-container>
   <ng-container *ngSwitchCase="statuses.FINISHED">
-    <h1>Игра Закончена</h1>
+    <section class="results">
+      <h1 class="results__title">Игра Закончена</h1>
+      <gh-alias-results [dataSource]="cards"></gh-alias-results>
+    </section>
   </ng-container>
 </section>

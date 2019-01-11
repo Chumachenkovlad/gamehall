@@ -6,3 +6,11 @@
   align-content: center;
   height: calc(100vh - 64px - 28px);
 }
+
+.results {
+  min-width: 300px;
+}
+
+.results__title {
+  text-align: center;
+}

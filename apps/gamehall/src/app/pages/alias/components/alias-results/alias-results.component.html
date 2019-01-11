@@ -1,0 +1,28 @@
+<div class="mat-elevation-z2" *ngIf="dataSource.length > 0">
+  <table
+    mat-table
+    class="full-width-table"
+    [dataSource]="dataSource"
+    matSort
+    aria-label="Elements"
+  >
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Слово</th>
+      <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+    </ng-container>
+
+    <!-- IsGuessed Column -->
+    <ng-container matColumnDef="isGuessed">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Угадано</th>
+      <td mat-cell *matCellDef="let row">
+        <mat-icon color="{{ row.isGuessed ? 'accent' : 'warn' }}">{{
+          row.isGuessed ? 'done' : 'clear'
+        }}</mat-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
